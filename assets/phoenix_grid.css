@@ -1,0 +1,36 @@
+.phoenix_grid table {
+		border-spacing: 0px;
+		border-collapse: collapse;
+}
+.phoenix_grid th {
+		font: bold 11px Arial Narrow, "Trebuchet MS", Verdana, Arial, Helvetica,
+		sans-serif;
+		color: #000;
+		border: 1px solid #C1DAD7;
+		text-transform: uppercase;
+		text-align: left;
+		padding: 9px 6px 9px 6px;
+		background: #CAE8EA url('images/header.jpg') no-repeat;
+		white-space:nowrap;
+}
+.phoenix_grid td {
+		border: 1px solid #C1DAD7;
+		background: #fff;
+		padding: 3px 6px 3px 6px;
+		color: #666;
+		white-space: nowrap;
+}
+.phoenix_grid td.alt {
+		background: #F5FAFA;
+		color: #B4AA9D;
+}
+.phoenix_grid a {
+	color: grey;
+	text-decoration: none;
+}
+.phoenix_grid a:hover {
+	color: black;
+}
+.phoenix_grid a.filtered {
+		color: blue;
+}

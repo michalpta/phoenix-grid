@@ -1,0 +1,1 @@
+You must <a href='javascript:location.reload();'>reload the page</a> to view the content.
