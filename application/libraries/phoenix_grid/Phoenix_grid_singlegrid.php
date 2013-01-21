@@ -59,6 +59,26 @@ class Phoenix_grid_singlegrid {
         $CI=&get_instance();
         if ($from)
             $this->from=$from;
+		// selecting
+        $select=$this->select;
+        if ($select)
+            $CI->db->select($select,FALSE);    
+        $from=$this->from;
+        $CI->db->from($from);
+        // joining
+        $join=$this->join;
+        if ($join) {
+            foreach($join as $key => $value) {
+                $CI->db->join($key,$value,'left');
+            }
+        }
+		$query=$CI->db->get();
+		$fields_list=$query->list_fields();
+		$i=0;
+        foreach ($fields_list as $field) {
+            $this->column_names['phoenix_grid_'.$this->id.'_'.$i]=$field;
+            $i++;
+        }
         $this->set_definition();
         $data['phoenix_grid_id']=$this->id;
         return $CI->load->view('phoenix_grid/phoenix_grid_view',$data,true);
@@ -198,11 +218,6 @@ class Phoenix_grid_singlegrid {
                 $column_headers[$field]=array('field_name'=>$field,'field_id'=>'phoenix_grid_'.$this->id.'_'.$i);
                 $i++;
             }
-        }
-        $i=0;
-        foreach ($fields_list as $field) {
-            $this->column_names['phoenix_grid_'.$this->id.'_'.$i]=$field;
-            $i++;
         }
         
         $this->set_definition();
