@@ -2,35 +2,54 @@
 		border-spacing: 0px;
 		border-collapse: collapse;
 }
+.nowrap .phoenix_grid tr:hover {
+		background: lightcyan;
+}
+.nowrap .phoenix_grid tr {
+		background: none;
+}
+.phoenix_grid tr {
+		background: white;
+}
 .phoenix_grid th {
-		font: bold 11px Arial Narrow, "Trebuchet MS", Verdana, Arial, Helvetica,
+		font: bold 11px "Arial Narrow", "Trebuchet MS", Verdana, Arial, Helvetica,
 		sans-serif;
 		color: #000;
 		border: 1px solid #C1DAD7;
 		text-transform: uppercase;
 		text-align: left;
 		padding: 9px 6px 9px 6px;
-		background: #CAE8EA url('images/header.jpg') no-repeat;
+		background: #CAE8EA url('images/bg_header.jpg') no-repeat;
 		white-space:nowrap;
 }
 .phoenix_grid td {
-		border: 1px solid #C1DAD7;
-		background: #fff;
-		padding: 3px 6px 3px 6px;
-		color: #666;
+		border: 1px solid lightgray;
+		padding: 1px 6px 1px 6px;
+		color: black;
+}
+.nowrap .phoenix_grid td {
 		white-space: nowrap;
+		max-width: 150px;
 }
 .phoenix_grid td.alt {
 		background: #F5FAFA;
 		color: #B4AA9D;
 }
 .phoenix_grid a {
-	color: grey;
-	text-decoration: none;
+	color: #555;
 }
 .phoenix_grid a:hover {
 	color: black;
 }
 .phoenix_grid a.filtered {
 		color: blue;
+}
+.phoenix_grid th a {
+	text-decoration: none;
+}
+.phoenix_grid_option_box {
+    -moz-box-shadow: 0px 5px 10px #B0B0B0;
+    -webkit-box-shadow: 0px 5px 10px #B0B0B0;
+    box-shadow: 0px 5px 10px #B0B0B0;
+    white-space: nowrap;
 }
